@@ -1,5 +1,5 @@
 # CTF
-Everything capture the flag
+Everything capture the flag, a list of self made/used python scripts
 
 
 Cool CTF framework to create own callenges:
