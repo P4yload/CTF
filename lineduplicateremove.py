@@ -15,4 +15,3 @@ out  = open('cleaned.txt', 'w')
 for line in lines_set:
     print(line)
     out.write(line)
-
