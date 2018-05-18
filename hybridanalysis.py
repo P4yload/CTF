@@ -1,5 +1,5 @@
 # This tool is used to submit a malicious file to hybridanalysis.com for static analysis and shows the url and the virustotal report
-# Dependencies: python >= 3.5
+# Dependencies: python >= 3.5, the hybridanalysis python connector (download it from their github repo)
 # Usage: python3 hybridanalysis.py FILENAMETOANALYZE
 
 #!/usr/bin/python3
