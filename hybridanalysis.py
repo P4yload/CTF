@@ -1,4 +1,7 @@
 # This tool is used to submit a malicious file to hybridanalysis.com for static analysis and shows the url and the virustotal report
+# Dependencies: python >= 3.5
+# Usage: python3 hybridanalysis.py FILENAMETOANALYZE
+
 #!/usr/bin/python3
 import os
 import sys
@@ -10,11 +13,9 @@ parser = argparse.ArgumentParser(description='The malware sample to submit for s
 parser.add_argument('file', type=argparse.FileType('r'), help='Enter the file')    
 args = parser.parse_args()    
 
-#print("This file full path (following symlinks)")
 full_path = os.path.realpath(__file__)
-#print(full_path + "\n")
-
 path = os.path.dirname(full_path)
+
 print("file path is " + path + "/" + sys.argv[1])
 file = sys.argv[1]
 print("file to submit for static analysis is: %s" % file)
