@@ -1,5 +1,5 @@
 # This tool is used to submit a malicious file to hybridanalysis.com for static analysis and shows the url and the virustotal report
-# Dependencies: python >= 3.5, the hybridanalysis python connector (download it from their github repo)
+# Dependencies: python >= 3.5
 # Usage: python3 hybridanalysis.py FILENAMETOANALYZE
 
 #!/usr/bin/python3
@@ -23,7 +23,7 @@ print("Submitting file now for cyb3r analys1s..")
 command = ['./vxapi.py', 'submit_file', path + '/' + file, '-env', '100', '-pv', 'yes','-q']
 
 #submitted file returns JSON value from Hybrid Analysis. Decide what the URL is
-result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True)
+result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 jsonresult = json.loads(result.stdout)
 s = str(jsonresult)
 hashcode = s[25:89]
